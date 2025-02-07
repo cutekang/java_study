@@ -99,29 +99,30 @@ public class ArrayTask1 {
 		
 //		다이아
 //		사용자가 입력할 정수의 개수만큼 배열을 만든 후 정수를 입력받고 평균값을 구하기
-//		Scanner scDiamond = new Scanner(System.in);
-//		String messageInputCount = "입력할 정수의 개수를 입력해주세요.";
-//		String messageInput = "정수를 입력해주세요 \nex)1 3 5 10";
-//		String resultDiamond = "평균 값 : %.2f";
-//		
-//		
-//		int intCount = 0;
-//		System.out.println(messageInputCount);
-//		intCount = scDiamond.nextInt();
-//		
-//		int sum = 0;
-//		double avg = 0.0;
-//		
-//		int [] arrAvg = new int[intCount];
-//		
-//		System.out.println(messageInput);
-//		for(int i = 0; i < arrAvg.length; i++) {
-//			arrAvg[i] = scDiamond.nextInt();
-//			sum += arrAvg[i];
-//		}
-//		
-//		avg = (double)sum / (double)intCount;
-//		
-//		System.out.printf(resultDiamond, avg);
+		Scanner scDiamond = new Scanner(System.in);
+		String messageInputCount = "입력할 정수의 개수를 입력해주세요.";
+		String messageInput = "정수를 입력해주세요 \nex)1 3 5 10";
+		String resultDiamond = "평균 값 : %.2f";
+		
+		
+		int intCount = 0;
+		System.out.println(messageInputCount);
+		intCount = scDiamond.nextInt();
+		
+		int sum = 0;
+		double avg = 0.0;
+		
+		int [] arrAvg = new int[intCount];
+		
+		System.out.println(messageInput);
+		for(int i = 0; i < arrAvg.length; i++) {
+			arrAvg[i] = scDiamond.nextInt();
+			sum += arrAvg[i];
+		}
+		
+		avg = (double)sum / (double)intCount;
+		scDiamond.close();
+		
+		System.out.printf(resultDiamond, avg);
 	}
 }
