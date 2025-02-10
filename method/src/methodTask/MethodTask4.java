@@ -81,24 +81,19 @@ public class MethodTask4 {
 	int[] getMinMaxValue(int[] inputArr) {
 		int min = 0, max = 0;
 		int [] arrResult = new int[2];
-		
 		min = inputArr[0];
 		max = inputArr[0];
-		
-		
 		for(int i = 1; i < inputArr.length; i++) {
-			if(min > inputArr[i]) {
+			if(min < inputArr[i]) {
 				min = inputArr[i];
 			}
 			
-			if(max < inputArr[i]) {
+			if(max > inputArr[i]) {
 				max = inputArr[i];
 			}
 		}
-		
 		arrResult[0] = min;
 		arrResult[1] = max;
-		
 		return arrResult;
 	}
 	
@@ -151,7 +146,7 @@ public class MethodTask4 {
 		Scanner sc = new Scanner(System.in);
 		
 		// 문제별 구분을 위한 구분 문자열 (공통 사용)
-		String messageSeperate = "=======================";
+		String messageSeperate = "\n=======================\n";
 		
 		// 1) 변수 생성
 		// 입력을 받기위한 출력 문자열 / 결과를 담을 문자열 / 입력받을 문자열 변수 / 문자열에서 찾아낼 문자 변수
@@ -242,7 +237,7 @@ public class MethodTask4 {
 //			input5[i] = sc.nextInt();
 //		}
 //		mt4.getMinMax(input5);
-//		
+		
 //		System.out.println(messageSeperate);
 		
 //		// 6) 실행
