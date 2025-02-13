@@ -103,7 +103,6 @@ public class MyMath {
 	    			operator += arrExpress[i];
 	    		}
 	    	}
-	    	
 	    	// 연산기호는 한 칸 이상 가질 수 없으므로 공백 문자열로 split한 문자열 배열을 반환
 	    	return operator.split("");
 	    };
@@ -161,7 +160,8 @@ public class MyMath {
 	        if (operators[i].equals("*") || operators[i].equals("/")) {
 	        	// 곱셈 나눗셈 연산 기호가 나올 때 마다 누적 계산 값을 갱신
 	            currentNumber = calculator(operators[i]).calc(currentNumber, intNumbers[i + 1]);
-	        } else {
+	        } 
+	        else {
 	            // 연산자 덧셈이나 뺄셈이 나오면 (+ 나 -)
 	        	// 현재까지 계산된 값을 numbers (곱셈 나눗셈 이후 다음 덧셈 뺄셈이 나온 인덱스 위치의) 배열에 저장
 	        	intNumbers[newNumberIndex] = currentNumber;
@@ -169,7 +169,7 @@ public class MyMath {
 	        	// for문 반복문 종료 후 최종적으로 나오게 될 연산기호는 
 	        	// 모든 곱셈 나눗셈이 종료된 후 이기 때문에
 	        	// 덧셈 아니면 뺄셈밖에 없음.
-	        	// 따라서 최종적으로 newNuberIndex크기의 length 를 가진 덧셈과 뺄셈의 연산기호 배열이 생성됨. 
+	        	// 따라서 최종적으로 newNuberIndex크기의 length 를 가진 덧셈과 뺄셈의 연산기호 배열이 필요함. 
 	            operators[newNumberIndex] = operators[i];
 	            
 	            // 각 덧셈 뺄셈이 배열에 덮어씌워지지 않도록 변수를 관리
