@@ -5,7 +5,9 @@ public class Lotto {
 		String[] luckyNumberArray = new String[6];
 		
 		for(int i = 0; i < 6; i++) {
+			
 			luckyNumberArray[i] = String.valueOf((int)(Math.floor((Math.random() * 45 + 1))));
+			
 			for(int j = 0; j < i; j++) {
 				if(luckyNumberArray[j].equals(luckyNumberArray[i])) {
 					i--;
