@@ -9,7 +9,7 @@ public class Lotto {
 	public static String[] getLuckyNums() {
 		return luckyNums;
 	}
-	public static void setLuckyNums(String[] luckyNums) {
+	public static void setLuckyNumbers(String[] luckyNums) {
 		Lotto.luckyNums = luckyNums;
 	}
 	public int getId() {
@@ -22,7 +22,7 @@ public class Lotto {
 	public Lotto() {;}
 	public Lotto(int id) {
 		setId(id);
-		setLuckyNums(new String[6]);
+		setLuckyNumbers(new String[6]);
 	}
 
 	@Override
@@ -48,7 +48,8 @@ public class Lotto {
 	 * 당첨을 확인하려면, 추첨 번호를 1~6까지의 수로만 만들고
 	 * sellLotto 의 번호도 1~6까지의 수로 만들면 확인이 가능합니다.
 	 */
-	public void drawNumber() {
+	
+	public String[] numberChoice() {
 		String[] numbers = new String[6];
 		
 		for(int i = 0; i < 6; i++) {
@@ -61,7 +62,11 @@ public class Lotto {
 				}
 			}
 		}
-		setLuckyNums(numbers);
+		return numbers;
+	}
+	
+	public void drawNumber() {
+		setLuckyNumbers(numberChoice());
 	}
 	
 	/***
