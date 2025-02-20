@@ -29,7 +29,6 @@ public class StreamTask2 {
 		ArrayList<Character> numsKor = new ArrayList<Character>(Arrays.asList('공', '일', '이', '삼', '사', '오', '육', '칠', '팔', '구'));
 		input3.chars().map(c -> numsKor.indexOf((char)c)).forEach(System.out::print);
 		System.out.println("\n\n=======================================================================\n");
-		
 //		4) 정수를 한글로 변경
 //		"1024" -> "일공이사"
 		String input4 = "1024";
