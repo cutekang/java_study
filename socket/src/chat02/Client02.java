@@ -35,7 +35,7 @@ public class Client02 {
 				out.write(outMessage + "\n");
 				out.flush();
 				
-				String inMessage = in.readLine();
+				String inMessage = in.readLine().replaceAll("\n", "");
 				System.out.println("부자진영 >> " + inMessage);
 			}
 			

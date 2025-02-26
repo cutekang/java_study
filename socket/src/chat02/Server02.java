@@ -31,13 +31,12 @@ public class Server02 {
 			out = new BufferedWriter(new OutputStreamWriter((socket.getOutputStream())));
 			
 			while(true) {
-				String inMessage = in.readLine();
+				String inMessage = in.readLine().replaceAll("\n", "");
 				System.out.println("거지재영 > " + inMessage);
-				
 				
 				System.out.println("부자진영이 거지재영한테 메세지 보내기 >> ");
 				String outMessage = sc.nextLine();
-				out.write(outMessage);
+				out.write(outMessage + "\n");
 				out.flush();
 				
 			}
