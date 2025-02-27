@@ -18,5 +18,7 @@ public class Karaoke {
 //	               프로그램이 종료된다.
 	int score;
 	int inputMoney;
+	int count;
+	bool service;
 	
 }
