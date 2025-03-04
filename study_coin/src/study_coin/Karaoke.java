@@ -19,6 +19,6 @@ public class Karaoke {
 	int score;
 	int inputMoney;
 	int count;
-	bool service;
+	Boolean service;
 	
 }
